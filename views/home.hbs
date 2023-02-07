@@ -1,0 +1,26 @@
+<h1 class="text-center">Agregar Empleados</h1>
+
+  {{#if empleadoEdit }}
+
+<form action="/editar/{{empleadoEdit._id}}" method="post" class="w-50 m-auto">
+
+<input value="{{empleadoEdit.nombre}}" type="text" name="nombre" placeholder="Ingrese nombre" class="form-control mt-3" >
+<input value="{{empleadoEdit.email}}" type="text" name="email" placeholder="Ingrese correo" class="form-control mt-3" >
+<input value="{{empleadoEdit.telefono}}" type="text" name="telefono" placeholder="Ingrese telefono" class="form-control mt-3" >
+<input value="{{empleadoEdit.direccion}}" type="text" name="direccion" placeholder="Ingrese direccion" class="form-control mt-3" >
+<button type="submit" class="btn btn-warning w-100  mt-2 mb-2">Editar</button>
+</form>
+{{else}}
+<form action="/" method="post" class="w-50 m-auto">
+
+<input type="text" name="nombre" placeholder="Ingrese nombre" class="form-control mt-3" >
+<input type="email" name="email" placeholder="Ingrese correo" class="form-control mt-3" >
+<input type="text" name="telefono" placeholder="Ingrese telefono" class="form-control mt-3" >
+<input type="text" name="direccion" placeholder="Ingrese direccion" class="form-control mt-3" >
+<button type="submit" class="btn btn-primary w-100 mt-2 mb-2">Agregar</button>
+</form>
+
+
+{{/if}}
+{{> Card }}
+

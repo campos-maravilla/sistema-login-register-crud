@@ -1,0 +1,21 @@
+<h2 class="text-center">{{user.userName}}</h2>
+
+<p class="my-2 text-center fw-bold">Edita aqui tu perfil</p>
+
+<div class="my-2 text-center">
+    {{#if imagen}}
+    <img src="./img/perfiles/{{imagen}}" width="130px" height="130px" alt="imagen de perfil" class="rounded-circle">
+    {{else}}
+     <img src="./img/perfiles/logo-tony.jpg" width="130px" height="130px" alt="imagen de perfil" class="rounded-circle">
+    {{/if}}
+</div>
+<div class="col-md-6 m-auto bg-dark  m-3 p-5">
+    <form action="/perfil" method="post" enctype="multipart/form-data">
+    <input type="file" class="form-control form-control-sm mb-3 p-5" id="formFileSm" name="myFile">
+    <div class="d-grid p-0 m-auto">
+        
+    <button class="btn btn-warning mb-3">Cambiar imagen de perfil</button>
+    </div>
+    </form>
+</div>
+</div>
